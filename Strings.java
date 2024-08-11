@@ -8,5 +8,13 @@ public class Strings {
         sb.setCharAt(0, 'A');
         System.out.println(sb);
 
+        sb.insert(0,'z');
+        System.out.println(sb);
+
+        sb.delete(1, 2);
+        System.out.println(sb);
+
+        sb.append('r');
+        System.out.println(sb);
     }
 }
