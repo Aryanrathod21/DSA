@@ -1,4 +1,4 @@
-public class Bits {
+public class SetBits {
     public static void main(String[] args) {
         int n = 5;
         int pos = 2;
