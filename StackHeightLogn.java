@@ -1,4 +1,4 @@
-public class StackHeight {
+public class StackHeightLogn {
     public static int calPower(int x,int n){
         if (x == 0) {
             return 0;
@@ -6,9 +6,11 @@ public class StackHeight {
         if (n == 0) {
             return  1;
         }
-        int calPownm1 = calPower(x, n-1);
-        int calPown = x * calPownm1;
-        return calPown ; 
+        if (n % 2 == 0) {
+            return calPower(x, n/2) * calPower(x, n/2);
+        }else{
+            return calPower(x, n/2) * calPower(x, n/2) * x;
+        }
     }
     public static void main(String[] args) {
         int x = 2;
