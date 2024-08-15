@@ -1,7 +1,7 @@
 public class SortedArray {
-    public static boolean isArrayStrictlySorted(int idx){
+    public static boolean isArrayStrictlySorted(int idx,int arr[]){
 
-        int arr[] = {1,2,3,4,5};
+  
         if (idx == arr.length - 1) {
             return true;
         }
@@ -10,10 +10,11 @@ public class SortedArray {
                 return false;
             }
             
-        return isArrayStrictlySorted(idx+1);
+        return isArrayStrictlySorted(idx+1,arr);
     }
     public static void main(String[] args) {
-       boolean result = isArrayStrictlySorted(0);
+        int arr[] = {1,2,3,4,5};
+       boolean result = isArrayStrictlySorted(0,arr);
        System.out.println(result);
     }
 }
