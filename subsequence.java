@@ -9,7 +9,7 @@ public class subsequence {
         printSubSeq(str, idx+1, newStr);
     }
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "abcd";
         printSubSeq(str, 0, "");
 
     }
