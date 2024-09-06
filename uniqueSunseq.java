@@ -17,7 +17,7 @@ public class uniqueSunseq {
         printSubSeq(str, idx+1, newStr,set);
     }
     public static void main(String[] args) {
-        String str = "aaa";
+        String str = "cccc";
         HashSet<String> set = new HashSet<>();
         printSubSeq(str, 0, "",set);
 
