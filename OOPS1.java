@@ -22,3 +22,7 @@ public class OOPS1 {
         s1.printDetails();
     }
 }
+
+
+//fuction overloading = compile time polymorphism
+//funtion overridding = run time polymorphism (inheritance)
