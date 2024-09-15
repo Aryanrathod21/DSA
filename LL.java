@@ -8,6 +8,7 @@ public class LL {
             this.data = data;
             this.next = null;
         }
+    }
 
         //add first
 
@@ -32,7 +33,7 @@ public class LL {
                 head = newNode;
                 return;
             }
-            Node currNode = new Node(data);
+            Node currNode = head;
             while (currNode.next != null) {
                 currNode = currNode.next;
             }
@@ -42,24 +43,28 @@ public class LL {
         }
 
         //print
-        public void printList(String data){
+        public void printList(){
             if (head == null) {
                 System.out.println("list is empty");
                 return;
             }
-            Node currNode = new Node(data);
+            Node currNode = head;
             while (currNode != null) {
-                System.out.print(currNode+" --> ");
+                System.out.print(currNode.data+" --> ");
+                currNode = currNode.next;
             }
 
             System.out.println("null");
             
         }
         
-    }
+    
     public static void main(String[] args) {
         LL list = new LL();
         list.addFirst("a");
+        list.addFirst("is");
+        list.addFirst("this");
+        list.addLast("list");
         list.printList();
     }
 }
