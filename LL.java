@@ -81,6 +81,18 @@ public class LL {
 
 
         }
+
+        public Node recursiveReverseLL(Node head){
+            if (head == null || head.next == null) {
+                return head;
+            }
+
+            Node newHead = recursiveReverseLL(head.next);
+            head.next.next = head;
+            head.next = null;
+
+            return newHead;
+        }
     
     public static void main(String[] args) {
         LL list = new LL();
@@ -90,5 +102,8 @@ public class LL {
         list.printList();
         list.reverseItrate();
         list.printList(); 
+
+        list.head = list.recursiveReverseLL(list.head);
+        list.printList();
     }
 }
