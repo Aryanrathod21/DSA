@@ -35,6 +35,13 @@ public class stackClass {
             return top;
 
         }
+
+        public static int peek(){
+            if (isEmpty()) {
+                return -1;
+            }
+            return head.data;
+        }
     }
     public static void main(String[] args) {
         
