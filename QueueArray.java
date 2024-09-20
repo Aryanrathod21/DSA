@@ -6,7 +6,7 @@ public class QueueArray {
         static int size;
         static int rear = -1;
 
-        public Queue(int n) {
+        Queue(int n) {
             arr = new int[n];
             this.size = n;
         }
@@ -50,6 +50,14 @@ public class QueueArray {
     }
 
     public static void main(String[] args) {
-        
+        Queue q = new Queue(5);
+        q.add(1);
+        q.add(2);
+        q.add(3);
+
+        while (!q.isEmpty()) {
+            System.out.println(q.peek());
+            q.remove();
+        }
     }
 }
