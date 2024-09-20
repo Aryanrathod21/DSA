@@ -14,7 +14,7 @@ public class QueueArray {
         public static boolean isEmpty(){
             return rear == -1;
         }
-        
+
         //enqueue
         public static void add(int data){
             if (rear == size-1) {
@@ -23,6 +23,20 @@ public class QueueArray {
             }
             rear++;
             arr[rear] = data;
+        }
+
+        //dequeue
+        public static int remove(){
+            if (isEmpty()) {
+                System.out.println("queue is empty");
+                return -1;
+            }
+            int front = arr[0];
+            for(int i = 0;i<rear;i++){
+                arr[i] = arr[i+1];
+            }
+            rear--;
+            return front;
         }
     }
 
