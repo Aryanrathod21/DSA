@@ -17,7 +17,7 @@ public class QueueCA {
         }
 
         public static boolean isFull(){
-            return (rear+1)%size = front;
+            return (rear+1)%size == front;
         }
 
         //enqueue
@@ -30,7 +30,7 @@ public class QueueCA {
             if (front == -1) {
                 front = 0;
             }
-            rear = (rear+1)%size;
+            rear = (rear+1) % size;
             arr[rear] = data;
         }
 
