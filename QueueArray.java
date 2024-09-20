@@ -38,6 +38,15 @@ public class QueueArray {
             rear--;
             return front;
         }
+
+        //front
+        public static int peek(){
+            if (isEmpty()) {
+                System.out.println("queue is empty");
+                return -1;
+            }
+            return arr[0];
+        }
     }
 
     public static void main(String[] args) {
