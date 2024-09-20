@@ -50,15 +50,15 @@ public class QueueCA {
             return result;
         }
 
-    //     //front
-    //     public static int peek(){
-    //         if (isEmpty()) {
-    //             System.out.println("queue is empty");
-    //             return -1;
-    //         }
-    //         return arr[0];
-    //     }
-    // }
+        //front
+        public static int peek(){
+            if (isEmpty()) {
+                System.out.println("queue is empty");
+                return -1;
+            }
+            return arr[front];
+        }
+    }
 
     public static void main(String[] args) {
         Queue q = new Queue(5);
