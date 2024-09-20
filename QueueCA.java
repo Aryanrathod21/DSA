@@ -34,19 +34,21 @@ public class QueueCA {
             arr[rear] = data;
         }
 
-    //     //dequeue
-    //     public static int remove(){
-    //         if (isEmpty()) {
-    //             System.out.println("queue is empty");
-    //             return -1;
-    //         }
-    //         int front = arr[0];
-    //         for(int i = 0;i<rear;i++){
-    //             arr[i] = arr[i+1];
-    //         }
-    //         rear--;
-    //         return front;
-    //     }
+        //dequeue
+        public static int remove(){
+            if (isEmpty()) {
+                System.out.println("queue is empty");
+                return -1;
+            }
+            int result = arr[front];
+            if (front == rear) {
+                front = rear = -1;
+            }
+            else{
+                front = (front+1) % size;
+            }
+            return result;
+        }
 
     //     //front
     //     public static int peek(){
