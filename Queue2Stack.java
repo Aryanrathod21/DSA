@@ -27,12 +27,7 @@ public class Queue2Stack {
                 System.out.println("queue is empty");
                 return -1;
             }
-            int front = head.data;
-            if (head == tail) {
-                tail = null;
-            }
-            head = head.next;
-            return front;
+            return s1.pop();
         }
 
         //front
