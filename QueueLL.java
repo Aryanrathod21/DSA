@@ -49,7 +49,7 @@ public class QueueLL {
                 System.out.println("queue is empty");
                 return -1;
             }
-            return arr[front];
+            return head.data;
         }
     }
 
