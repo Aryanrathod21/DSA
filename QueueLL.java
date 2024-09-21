@@ -54,7 +54,7 @@ public class QueueLL {
     }
 
     public static void main(String[] args) {
-        Queue q = new Queue(5);
+        Queue q = new Queue();
         q.add(1);
         q.add(2);
         q.add(3);
