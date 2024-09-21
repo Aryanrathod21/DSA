@@ -35,14 +35,12 @@ public class QueueLL {
                 System.out.println("queue is empty");
                 return -1;
             }
-            int result = arr[front];
-            if (front == rear) {
-                front = rear = -1;
+            int front = head.data;
+            if (head == tail) {
+                tail = null;
             }
-            else{
-                front = (front+1) % size;
-            }
-            return result;
+            head = head.next;
+            return front;
         }
 
         //front
