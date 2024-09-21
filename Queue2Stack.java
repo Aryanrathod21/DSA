@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Queue2Stack {
-    public class Queue{
+    static class Queue{
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
 
@@ -36,11 +36,11 @@ public class Queue2Stack {
                 System.out.println("queue is empty");
                 return -1;
             }
-            return head.data;
+            return s1.peek();
         }
     }
     public static void main(String[] args) {
-        Queue<Integer> q = new LinkedList<>();
+        Queue q = new Queue();
         q.add(1);
         q.add(2);
         q.add(3);
