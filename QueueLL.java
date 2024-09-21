@@ -14,25 +14,19 @@ public class QueueLL {
         static Node tail = null;
 
         public static boolean isEmpty(){
-            return head = null && tail = null;
+            return head == null && tail == null;
         }
 
-        public static boolean isFull(){
-            return (rear+1)%size == front;
-        }
 
         //enqueue
         public static void add(int data){
-            if (isFull()) {
-                System.out.println("Queue is full");
+            Node newNode = new Node(data);
+            if (tail == null) {
+                head = tail = newNode;
                 return;
             }
-
-            if (front == -1) {
-                front = 0;
-            }
-            rear = (rear+1) % size;
-            arr[rear] = data;
+            tail.next = newNode;
+            tail = newNode;             
         }
 
         //dequeue
