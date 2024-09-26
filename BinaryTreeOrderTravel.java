@@ -56,6 +56,9 @@ public class BinaryTreeOrderTravel {
     }
 
     public static void levelOrder(Node root){
+        if (root == null) {
+            return;
+        }
         Queue<Node> q = new LinkedList<>();
         q.add(root);
         q.add(null);
