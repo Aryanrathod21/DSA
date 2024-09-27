@@ -114,10 +114,22 @@ public class BinaryTreeOrderTravel {
         return maxHeight;       
     }
 
+    //O(n^2)
+    public static int diameter(Node root){
+        if (root == null) {
+            return 0;
+        }
+        int leftdia = diameter(root.left);
+        int rightdia = diameter(root.right);
+        int height = heightOfTree(root.left) + heightOfTree(root.right) + 1;
+        return Math.max(height, Math.max(leftdia, rightdia));
+
+    }
+
     public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
-        System.out.println(heightOfTree(root));
+        System.out.println(diameter(root));
     }
 }
